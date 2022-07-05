@@ -240,7 +240,7 @@ nav ul form input:focus::placeholder{
     height: 50px;
     display: none;
     position: fixed;
-    bottom: 80px;
+    bottom: 40px;
     right: 30px;
     z-index: 999;
     border: 1px solid var(--blue);
