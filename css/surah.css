@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 :root{
     --blue: #2F5C85;
@@ -168,17 +169,36 @@ nav ul {
     color: var(--blue);
     justify-content: right;
 }
-
 .ayat > div:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.ayat > div > div:nth-child(1){
     padding: 5px;
     border-radius: 5px;
     font-size: 12px;
     font-weight: 700;
     box-shadow: inset 0 0 3px var(--blue2);
     width: max-content;
+    height: max-content;
     color: var(--blue);
 }
-
+.ayat > div > div:nth-child(2){
+    display: flex;
+    background-color: var(--blue2);
+    padding: 5px;
+    color: var(--white);
+    font-family: 'Sriracha', cursive;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px var(--white);
+}
 .ayat > .bawah > audio{
     display: block;
     position: relative;

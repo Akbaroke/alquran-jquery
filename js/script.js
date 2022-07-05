@@ -49,7 +49,10 @@ $('#daftar-surat').on('click', '.card' , function(){
         $.each(ayat, function(i, ambil){
             $('#daftar-ayat').append(`
             <div class="ayat">
-                <div>Juz ke-`+ ambil.meta.juz +`</div>
+                <div>
+                    <div>Juz ke-`+ ambil.meta.juz +`</div>
+                    <div>`+ ambil.number.inSurah +`</div>
+                </div>
                 <div class="kanan">
                     <span>`+ ambil.text.arab +`</span>
                     <span>`+ ambil.text.transliteration.en +`</span>
