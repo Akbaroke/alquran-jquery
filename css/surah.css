@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+
+:root{
+    --blue: #2F5C85;
+    --blue2: #1d3e5e;
+    --white: #fefefe;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Finlandica', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    background: #F6F6F7;
+}
+ul,li,a{
+    text-decoration: none;
+    list-style: none;
+}
+input{
+    outline: none;
+}
+
+/* Navbar */
+nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 60px;
+    background: var(--blue);
+    padding: 0 20px;
+    z-index: 999999999;
+}
+nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.logo{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    text-shadow: -1px 1px 3px #333;
+    display: block;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 70px auto;
+    padding: 0 20px;
+}
+.name_head{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #5e5e5e88;
+    color: var(--blue);
+    text-align: center;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 20px;
+    justify-content: flex-start;
+}
+#art-1{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#art-2{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+@media (max-width: 830px) {
+    .name_head{
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #5e5e5e88;
+        color: var(--blue);
+        text-align: center;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        gap: 10px;
+        justify-content: flex-start;
+    }
+    .card > a:hover{
+        color: var(--white);
+        background-color: var(--blue);
+        box-shadow: 3px 3px 3px #5e5e5e88 ;
+        border-radius: 5px;
+    }
+}
+
+.ayat{
+    border-bottom: 1px solid #5e5e5e88;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.ayat > .kanan {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: right;
+    color: var(--blue2);
+    gap: 20px;
+    margin: 10px 5px;
+}
+.ayat > .kanan > span:nth-child(1){
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Noto Naskh Arabic', serif;
+}
+.ayat > .kanan > span:nth-child(2){
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.ayat > .kiri{
+    display: flex;
+    gap: 10px;
+    padding: 20px 0 10px 0;
+    color: var(--blue);
+}
+.ayat > .kiri > span:nth-child(1){
+    font-size: 16px;
+    font-weight: 600;
+}
+.ayat > .kiri > span:nth-child(1)::after{
+    content: '.';
+}
+.ayat > .kiri > span:nth-child(2){
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.ayat > .bawah{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: var(--blue);
+    justify-content: right;
+}
+
+.ayat > div:nth-child(1){
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: inset 0 0 3px var(--blue2);
+    width: max-content;
+    color: var(--blue);
+}
+
+.ayat > .bawah > audio{
+    display: block;
+    position: relative;
+    z-index: 0;
+    width: 220px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+audio::-webkit-media-controls-panel{
+    background: #F6F6F7;
+    position: relative;
+    box-shadow: inset 0 0 5px var(--blue2);
+    border-radius: 50px;
+}
+
+.murottal{
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+    height: 50px;
+    background: var(--blue);
+    padding: 0 20px;
+    z-index: 999999999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px 15px 0 0;
+    box-shadow: -1px 6px 5px 5px var(--blue);
+}
+.murottal > div{
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: inset 0 0 5px var(--blue2);
+    width: max-content;
+    color: var(--blue);
+    background-color: var(--white);
+}
+
+#murottal{
+    display: block;
+    position: relative;
+    z-index: 0;
+    width: 50vw;
+    height: 30px;
+    border-radius: 5px;
+}
+#murottal::-webkit-media-controls-panel{
+    background: #F6F6F7;
+    position: relative;
+    box-shadow: inset 0 0 5px var(--blue2);
+    border-radius: 50px;
+}
+
+@media (max-width: 425px) {
+    #murottal{
+        display: block;
+        position: relative;
+        z-index: 0;
+        width: 220px;
+        height: 30px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 356px) {
+    #murottal{
+        display: block;
+        position: relative;
+        z-index: 0;
+        width: 180px;
+        height: 30px;
+        border-radius: 5px;
+    }
+}
+
+.kembali{
+    font-size: 16px;
+    color: var(--blue);
+    cursor: pointer;
+    font-weight: 400;
+    display: block;
+    background-color: var(--white);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.kembali:hover{
+    box-shadow: -1px 1px 3px #333;
+}
